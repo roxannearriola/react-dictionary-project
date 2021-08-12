@@ -1,0 +1,33 @@
+body {
+	background-color: #c19b93;
+	color: #ede1dd;
+	font-family: "EB Garamond", serif;
+	font-weight: 500;
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.App-header {
+	margin: 75px auto 35px;
+}
+
+.App-header h1 {
+	font-size: 50px;
+}
+
+.App footer {
+	font-size: 14px;
+	margin-bottom: 75px;
+}
+
+.App a {
+	color: #96756f;
+	font-weight: 800;
+	text-decoration: none;
+	transition: all 150ms ease-in-out;
+}
+
+.App a:hover {
+	color: #ede1dd;
+	text-decoration: underline;
+}

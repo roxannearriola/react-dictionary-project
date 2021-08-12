@@ -3,16 +3,18 @@ import React from "react";
 import "./Phonetics.css";
 
 export default function Phonetics(props) {
-	let audio = new Audio(props.phonetics.audio);
+	let audio = props.phonetics.audio;
 
-	const start = () => {
-		audio.play();
-	};
+	function playAudio() {
+		const audioSound = new Audio(audio);
+		audioSound.play();
+	}
 
 	return (
-		<div className="Phonetics">
-			<em>[ {props.phonetics.text} ]</em>{" "}
-			<i class="fas fa-volume-up" onClick={start}></i>
-		</div>
+		<span className="Phonetics">
+			<button className="listen-phonetics" onClick={playAudio}>
+				{props.phonetics.text} <i className="fas fa-volume-up"></i>
+			</button>
+		</span>
 	);
 }

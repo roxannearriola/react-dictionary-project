@@ -1,0 +1,39 @@
+.Meaning .meaning-row {
+	border-top: 1px solid #ede1dd;
+	padding: 20px 0;
+}
+.Meaning .part-of-speech-column,
+.Meaning .definition-column {
+	padding-left: 0;
+}
+
+.Meaning h3 {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 800;
+	line-height: 1.7;
+}
+
+.Meaning .definition {
+	font-size: 20px;
+}
+
+.Meaning .example {
+	font-size: 19px;
+	margin: 5px 0 10px 0;
+	opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+	.Meaning .meaning-row {
+		padding: 10px 0;
+	}
+
+	.Meaning .definition {
+		font-size: 16px;
+	}
+
+	.Meaning .example {
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,26 @@
+.Phonetics .listen-phonetics {
+	background-color: #c19b93;
+	border: 1px solid #ede1dd;
+	border-radius: 25px;
+	color: #ede1dd;
+	font-weight: 600;
+	margin-bottom: 50px;
+	margin-right: 15px;
+	padding: 5px 10px;
+}
+
+.Phonetics .listen-phonetics:hover {
+	background-color: #ede1dd;
+	color: #c19b93;
+	cursor: pointer;
+}
+
+.Phonetics .fa-volume-up {
+	margin-left: 5px;
+}
+
+@media (max-width: 576px) {
+	.Phonetics .listen-phonetics {
+		margin-bottom: 20px;
+	}
+}
