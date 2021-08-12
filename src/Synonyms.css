@@ -3,7 +3,7 @@
 }
 .Synonyms .word-synonyms {
 	font-size: 16px;
-	line-height: 1;
 	list-style: none;
 	padding-right: 15px;
+	text-decoration: underline;
 }

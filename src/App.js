@@ -10,7 +10,7 @@ export default function App() {
 					<h1 className="text-center">Dictionary</h1>
 				</header>
 				<main>
-					<Dictionary defaultKeyword="hello" />
+					<Dictionary defaultKeyword="star" />
 				</main>
 				<footer className="text-center mt-4">
 					<p>
