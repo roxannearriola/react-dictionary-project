@@ -7,7 +7,8 @@
 	background-color: rgba(237, 225, 221, 0.45);
 	width: 100%;
 	border: none;
-	border-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
 	padding: 10px 25px;
@@ -28,9 +29,10 @@
 .Dictionary .submit-button {
 	background-color: rgba(237, 225, 221, 0.45);
 	border: none;
-	border-radius: 25px;
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
+	border-bottom-right-radius: 25px;
+	border-top-right-radius: 25px;
 	color: #96756f;
 	font-weight: 800;
 	text-decoration: none;
