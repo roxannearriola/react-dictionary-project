@@ -1,0 +1,12 @@
+.Examples {
+	font-size: 19px;
+	font-style: italic;
+	margin-top: 5px;
+	opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+	.Examples {
+		font-size: 16px;
+	}
+}

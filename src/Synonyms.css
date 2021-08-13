@@ -1,7 +1,16 @@
+.Synonyms {
+	margin-top: 5px;
+}
+
 .Synonyms ul {
 	padding: 0;
 }
+
+.Synonyms strong {
+	padding-right: 10px;
+}
 .Synonyms .word-synonyms {
+	display: inline-block;
 	font-size: 16px;
 	list-style: none;
 	padding-right: 15px;
