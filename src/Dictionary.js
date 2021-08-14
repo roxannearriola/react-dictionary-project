@@ -28,6 +28,7 @@ export default function Dictionary(props) {
 	function search() {
 		// documentation: https://dictionaryapi.dev/
 		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+		setError(false);
 		axios
 			.get(apiUrl)
 			.then(handleDictionaryResponse)
@@ -80,7 +81,7 @@ export default function Dictionary(props) {
 						</div>
 					</div>
 					<Results results={results} error={error} />
-					<Photos photos={photos} />
+					<Photos photos={photos} error={error} />
 				</div>
 			</div>
 		);

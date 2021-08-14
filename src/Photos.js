@@ -3,7 +3,7 @@ import React from "react";
 import "./Photos.css";
 
 export default function Photos(props) {
-	if (props.photos) {
+	if (props.photos && !props.error) {
 		return (
 			<div className="Photos d-none d-sm-block">
 				<div className="row">

@@ -30,7 +30,7 @@ export default function Results(props) {
 	} else {
 		return (
 			<div className="Results-error">
-				<h4>
+				<h4 className="text-center">
 					We couldn't find the definition of the word you were looking for. You
 					can try searching another word.
 				</h4>
