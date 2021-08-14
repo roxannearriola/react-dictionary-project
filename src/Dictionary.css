@@ -1,28 +1,32 @@
 .Dictionary .form-input {
-	display: flex;
 	margin-bottom: 35px;
 }
 
 .Dictionary .search-input {
 	background-color: rgba(237, 225, 221, 0.45);
-	width: 100%;
 	border: none;
 	border-radius: 25px;
-	border-bottom-right-radius: 0;
-	border-top-right-radius: 0;
+	color: white;
+	font-weight: 600;
 	padding: 10px 25px;
 }
 
-.Dictionary .search-input:focus {
+.Dictionary .search-input:focus,
+.Dictionary .submit-button:focus {
 	background-color: #96756f;
+	box-shadow: none;
 	color: #ede1dd;
-	font-weight: 600;
-	outline: none;
 }
 
 .Dictionary .search-input::placeholder {
 	color: white;
 	font-weight: 600;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .Dictionary .submit-button {
@@ -33,6 +37,7 @@
 	border-top-left-radius: 0;
 	color: #96756f;
 	font-weight: 800;
+	left: 1px;
 	text-decoration: none;
 	transition: all 150ms ease-in-out;
 	padding: 10px 25px;

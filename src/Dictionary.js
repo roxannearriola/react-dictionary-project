@@ -10,6 +10,7 @@ export default function Dictionary(props) {
 	let [results, setResults] = useState(null);
 	let [loaded, setLoaded] = useState(false);
 	let [photos, setPhotos] = useState(null);
+	let [error, setError] = useState(false);
 
 	function handleDictionaryResponse(response) {
 		setResults(response.data[0]);
@@ -27,7 +28,14 @@ export default function Dictionary(props) {
 	function search() {
 		// documentation: https://dictionaryapi.dev/
 		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-		axios.get(apiUrl).then(handleDictionaryResponse);
+		axios
+			.get(apiUrl)
+			.then(handleDictionaryResponse)
+			.catch((error) => {
+				if (error.response.status === 404) {
+					setError(true);
+				}
+			});
 
 		const pexelsApiKey =
 			"563492ad6f9170000100000195eb587fb30045c5b6d6a285f9580bd5";
@@ -53,15 +61,17 @@ export default function Dictionary(props) {
 					<div className="row">
 						<div className="col">
 							<form onSubmit={handleSubmit}>
-								<div className="form-input">
+								<div className="input-group form-input">
 									<input
 										type="search"
-										className="search-input"
+										className="form-control search-input"
 										placeholder="Search for a word"
+										aria-label="Search for a word"
+										aria-describedby="search"
 										onChange={handleKeywordChange}
 									/>
-									<div className="form-submit">
-										<button type="submit" className="submit-button">
+									<div className="input-group-append form-submit">
+										<button type="submit" className="btn submit-button">
 											Search
 										</button>
 									</div>
@@ -69,7 +79,7 @@ export default function Dictionary(props) {
 							</form>
 						</div>
 					</div>
-					<Results results={results} />
+					<Results results={results} error={error} />
 					<Photos photos={photos} />
 				</div>
 			</div>

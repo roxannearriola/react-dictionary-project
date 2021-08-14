@@ -5,7 +5,8 @@ import Meaning from "./Meaning";
 import "./Results.css";
 
 export default function Results(props) {
-	if (props.results) {
+	console.log(props.error);
+	if (props.results && !props.error) {
 		return (
 			<div className="Results">
 				<h2>{props.results.word}</h2>
@@ -16,6 +17,7 @@ export default function Results(props) {
 						</span>
 					);
 				})}
+
 				{props.results.meanings.map(function (meaning, index) {
 					return (
 						<div key={index}>
@@ -26,6 +28,13 @@ export default function Results(props) {
 			</div>
 		);
 	} else {
-		return null;
+		return (
+			<div className="Results-error">
+				<h4>
+					We couldn't find the definition of the word you were looking for. You
+					can try searching another word.
+				</h4>
+			</div>
+		);
 	}
 }
